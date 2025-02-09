@@ -1,0 +1,29 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Produção de Pão</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Previsão de Produção de Pão (kg)</h1>
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>Produção Estimada</th>
+        </tr>
+        {% for previsao in previsoes %}
+        <tr>
+            <td>{{ previsao.data }}</td>
+            <td>{{ previsao.pao }} kg</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
